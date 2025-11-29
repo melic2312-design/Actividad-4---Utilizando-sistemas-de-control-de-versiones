@@ -194,6 +194,24 @@ public class Actividad2SistemaGestionBiblioteca {
                         }
                     }
                     break;
+                case 9:
+                    System.out.println("Ingrese el nombre del libro a buscar:");
+                    String nombreBuscar = entrada.nextLine();
+                    boolean encontrado = false;
+
+                    for (String[] libro : libros) {
+                        if (libro[1].equalsIgnoreCase(nombreBuscar)) {
+                            System.out.println("Libro encontrado:");
+                            System.out.println("ID: " + libro[0] + " | Autor: " + libro[2]);
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (!encontrado) {
+                        System.out.println("El libro no está disponible.");
+                    }
+                    break;
             }
         }while (opcion != 7);
                
