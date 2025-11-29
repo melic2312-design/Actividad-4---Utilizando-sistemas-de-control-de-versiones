@@ -181,6 +181,19 @@ public class Actividad2SistemaGestionBiblioteca {
                 default:
                     System.out.println("Opcion no valida. Intente de nuevo");
                     break;
+                case 8:
+                    if (librosPrestados.isEmpty()) {
+                        System.out.println("No hay historial de préstamos.");
+                    } else {
+                        System.out.println("---- HISTORIAL DE LIBROS PRESTADOS ----");
+                        for (String[] prestado : librosPrestados) {
+                            System.out.println("ID: " + prestado[0]
+                                    + " | Nombre: " + prestado[1]
+                                    + " | Autor: " + prestado[2]
+                                    + " | Cédula usuario: " + prestado[3]);
+                        }
+                    }
+                    break;
             }
         }while (opcion != 7);
                
