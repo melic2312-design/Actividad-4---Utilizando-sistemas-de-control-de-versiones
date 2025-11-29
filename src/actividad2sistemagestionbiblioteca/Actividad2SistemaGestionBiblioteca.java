@@ -225,6 +225,34 @@ public class Actividad2SistemaGestionBiblioteca {
                         }
                     }
                     break;
+                case 11:
+                    System.out.println("Ingrese la cédula del usuario a buscar:");
+
+                while (!entrada.hasNextInt()) {
+                    System.out.println("Error: Ingrese un número válido:");
+                    entrada.next();
+                }
+
+                    int cedBuscar = entrada.nextInt();
+                    entrada.nextLine();
+
+                    boolean usuarioEncontrado = false;
+
+                    for (String[] usuario : usuarios) {
+                    if (usuario[0].equals(String.valueOf(cedBuscar))) {
+                    System.out.println("Usuario encontrado:");
+                    System.out.println("Cédula: " + usuario[0]
+                                    + " | Nombre: " + usuario[1]
+                                    + " | Apellidos: " + usuario[2]);
+                    usuarioEncontrado = true;
+                    break;
+                }
+            }
+
+                if (!usuarioEncontrado) {
+                    System.out.println("No existe un usuario con esa cédula.");
+                }
+                    break;
             }
         }while (opcion != 7);
                
