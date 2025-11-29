@@ -253,6 +253,17 @@ public class Actividad2SistemaGestionBiblioteca {
                     System.out.println("No existe un usuario con esa cédula.");
                 }
                     break;
+                case 12:
+                if (colaEspera.isEmpty()) {
+                    System.out.println("No hay usuarios en la cola de espera.");
+                } else {
+                    System.out.println("---- COLA DE ESPERA ----");
+                    for (String[] enCola : colaEspera) {
+                        System.out.println("Libro ID: " + enCola[0]
+                                + " | Cédula del usuario: " + enCola[1]);
+                    }
+                }
+                break;
             }
         }while (opcion != 7);
                
