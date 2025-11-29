@@ -212,6 +212,19 @@ public class Actividad2SistemaGestionBiblioteca {
                         System.out.println("El libro no está disponible.");
                     }
                     break;
+                case 10:
+                    if (librosPrestados.isEmpty()) {
+                    System.out.println("No hay libros prestados actualmente.");
+                } else {
+                    System.out.println("---- LIBROS PRESTADOS ACTUALMENTE ----");
+                    for (String[] prestado : librosPrestados) {
+                    System.out.println("ID: " + prestado[0]
+                                    + " | Nombre: " + prestado[1]
+                                    + " | Autor: " + prestado[2]
+                                    + " | Cédula usuario: " + prestado[3]);
+                        }
+                    }
+                    break;
             }
         }while (opcion != 7);
                
